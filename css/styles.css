@@ -69,7 +69,7 @@
   right: 20px;
   font-size: 30px;
   font-weight: bold;
-  color: orange;
+  color: #ffdd00;
   text-shadow: 1px 1px #000;
   z-index: 999;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -90,6 +90,7 @@
   font-weight: bold;
   border-radius: 100%;
   animation: restart-animation 1s infinite;
+  display: none;
 }
 
 @keyframes pipe-animation {
@@ -148,7 +149,7 @@
   0% {
     width: 100px;
     height: 100px;
-    top: 220px;
+    top: 180px;
     left: 500px;
     border: 10px solid #c00000;
     color: #c00000;
@@ -157,7 +158,7 @@
   30% {
     width: 120px;
     height: 120px;
-    top: 210px;
+    top: 180px;
     left: 490px;
     border: 10px solid #ffdd00;
     color: #ffdd00;
@@ -166,7 +167,7 @@
   80% {
     width: 120px;
     height: 120px;
-    top: 210px;
+    top: 180px;
     left: 490px;
     border: 10px solid #00eaff;
     color: #00eaff;
@@ -175,7 +176,7 @@
   100% {
     width: 100px;
     height: 100px;
-    top: 220px;
+    top: 180px;
     left: 500px;
     border: 10px solid #7000a4;
     color: #7000a4;

@@ -1,7 +1,11 @@
 let timerInterval;
 
+const mario = document.querySelector(".mario");
+const pipe = document.querySelector(".pipe");
+const restart = document.querySelector(".restart");
+const chronometer = document.querySelector(".chronometer");
+
 window.onload = function () {
-  const display = document.querySelector(".chronometer");
   let startTime = Date.now();
 
   function updateChronometer() {
@@ -14,14 +18,11 @@ window.onload = function () {
     seconds = seconds < 10 ? "0" + seconds : seconds;
     milliseconds = milliseconds < 10 ? "0" + milliseconds : milliseconds;
 
-    display.textContent = `${seconds}.${milliseconds}`;
+    chronometer.textContent = `${seconds}.${milliseconds}`;
   }
 
   timerInterval = setInterval(updateChronometer, 10);
 };
-
-const mario = document.querySelector(".mario");
-const pipe = document.querySelector(".pipe");
 
 const jump = () => {
   mario.classList.add("jump");
@@ -43,13 +44,20 @@ const loop = setInterval(() => {
 
     mario.style.animation = "none";
     mario.style.bottom = `${marioPosition}px`;
-
     mario.src = "./images/game-over.png";
     mario.style.width = "40px";
     mario.style.marginLeft = "40px";
 
+    restart.style.display = "block";
+
+    chronometer.style.color = "#ff0000";
+
     clearInterval(timerInterval);
   }
 }, 10);
+
+restart.onclick = function () {
+  window.location.reload();
+};
 
 document.addEventListener("keydown", jump);
