@@ -63,6 +63,35 @@
   animation: paragoomba-animation 12s infinite linear;
 }
 
+.chronometer {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: orange;
+  text-shadow: 1px 1px #000;
+  z-index: 999;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.restart {
+  position: absolute;
+  top: 180px;
+  left: 500px;
+  background-color: #0039a2;
+  border: 1px solid #12a4ff;
+  color: white;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  opacity: 0.8;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 100%;
+  animation: restart-animation 1s infinite;
+}
+
 @keyframes pipe-animation {
   from {
     right: 0;
@@ -79,15 +108,15 @@
   }
 
   40% {
-    bottom: 150px;
+    bottom: 170px;
   }
 
   50% {
-    bottom: 150px;
+    bottom: 170px;
   }
 
   60% {
-    bottom: 150px;
+    bottom: 170px;
   }
 
   100% {
@@ -112,5 +141,43 @@
 
   to {
     right: 100%;
+  }
+}
+
+@keyframes restart-animation {
+  0% {
+    width: 100px;
+    height: 100px;
+    top: 220px;
+    left: 500px;
+    border: 10px solid #c00000;
+    color: #c00000;
+  }
+
+  30% {
+    width: 120px;
+    height: 120px;
+    top: 210px;
+    left: 490px;
+    border: 10px solid #ffdd00;
+    color: #ffdd00;
+  }
+
+  80% {
+    width: 120px;
+    height: 120px;
+    top: 210px;
+    left: 490px;
+    border: 10px solid #00eaff;
+    color: #00eaff;
+  }
+
+  100% {
+    width: 100px;
+    height: 100px;
+    top: 220px;
+    left: 500px;
+    border: 10px solid #7000a4;
+    color: #7000a4;
   }
 }
